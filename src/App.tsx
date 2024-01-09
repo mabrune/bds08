@@ -1,11 +1,11 @@
 import './assets/styles/custom.scss';
-import Home from 'pages/Home';
+import ProfileSearch from 'pages/ProfileSearch';
 
 import './App.css';
 
 const App = () => {
   return (
-    <Home />
+    <ProfileSearch />
   );
 }
 
