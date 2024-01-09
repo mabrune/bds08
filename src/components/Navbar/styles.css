@@ -6,3 +6,25 @@
     color: #FFF;
 }
 
+.nav-logo-text h4 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media (min-width: 576px) {
+    .main-nav {
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-nav {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-nav {
+        padding: 0 31px;
+    }
+}

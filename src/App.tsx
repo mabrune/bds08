@@ -1,14 +1,11 @@
 import './assets/styles/custom.scss';
-import Navbar from 'components/Navbar';
+import Home from 'pages/Home';
 
 import './App.css';
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <h1>Hello Github API</h1>
-    </>
+    <Home />
   );
 }
 
