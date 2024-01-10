@@ -1,30 +1,37 @@
 .main-nav {
-    min-height: 62px;
+   min-height: 62px;
 }
 
-.nav-logo-text, .nav-logo-text:hover {
-    color: #FFF;
+.nav-logo-text,
+.nav-logo-text:hover {
+   color: #fff;
 }
 
 .nav-logo-text h4 {
-    font-size: 24px;
-    font-weight: 500;
+   font-size: 24px;
+   font-weight: 500;
 }
 
 @media (min-width: 576px) {
-    .main-nav {
-        padding: 0 10px;
-    }
+   .nav-logo-text h4 {
+      padding-left: 8px;
+   }
 }
 
 @media (min-width: 768px) {
-    .main-nav {
-        padding: 0 20px;
-    }
+   .nav-logo-text h4 {
+      padding-left: 14px;
+   }
 }
 
 @media (min-width: 992px) {
-    .main-nav {
-        padding: 0 31px;
-    }
+   .nav-logo-text h4 {
+      padding-left: 20px;
+   }
+}
+
+@media (min-width: 1200px) {
+   .nav-logo-text h4 {
+      padding-left: 28px;
+   }
 }
