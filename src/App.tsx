@@ -1,11 +1,11 @@
 import './assets/styles/custom.scss';
-import ProfileSearch from 'pages/ProfileSearch';
+import MyRoutes from 'MyRoutes';
 
 import './App.css';
 
 const App = () => {
   return (
-    <ProfileSearch />
+    <MyRoutes />
   );
 }
 
