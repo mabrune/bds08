@@ -1,6 +1,7 @@
 import ResultCard from 'components/ResultCard';
 import { useState } from 'react';
 import axios from 'axios';
+import CardLoader from './CardLoader';
 
 import './styles.css';
 
@@ -23,6 +24,8 @@ const ProfileSearch = () => {
 
    const [userData, setUserData] = useState<UserData>();
 
+   const [isLoading, setIsLoading] = useState(false);
+
    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const name = event.target.name;
       const value = event.target.value;
@@ -32,6 +35,8 @@ const ProfileSearch = () => {
    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
+      setIsLoading(true);
+
       axios
          .get(`https://api.github.com/users/${formData.user}`)
          .then((response) => {
@@ -40,6 +45,9 @@ const ProfileSearch = () => {
          .catch((error) => {
             setUserData(undefined);
             console.log(error);
+         })
+         .finally(() => {
+            setIsLoading(false);
          });
    };
 
@@ -63,17 +71,20 @@ const ProfileSearch = () => {
             </form>
          </div>
 
-         {userData && (
-            <>
-               <ResultCard
-                  avatar_url={userData.avatar_url}
-                  url={userData.url}
-                  followers={userData.followers}
-                  location={userData.location}
-                  name={userData.name}
-               />
-            </>
-         )}
+         <div className="search-card-info">
+            {userData &&
+               (isLoading ? (
+                  <CardLoader />
+               ) : (
+                  <ResultCard
+                     avatar_url={userData.avatar_url}
+                     url={userData.url}
+                     followers={userData.followers}
+                     location={userData.location}
+                     name={userData.name}
+                  />
+               ))}
+         </div>
       </div>
    );
 };
