@@ -15,7 +15,6 @@
 .card-info h3 {
    font-size: 0.62em;
    font-weight: 700;
-   border: 1px solid red;
 }
 
 .card-info p {
@@ -24,7 +23,6 @@
    font-size: 0.62em;
    font-weight: 400;
    width: 80%;
-   border: 1px solid blue;
 }
 
 .color-url {

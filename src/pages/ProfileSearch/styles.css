@@ -1,20 +1,17 @@
 .search-container {
    padding: 10px 10px 0 10px;
    font-size: 38px;
-   border: 1px solid yellow;
 }
 
 .search-card {
    padding: 10px 6px 20px 6px;
    border-radius: 16px;
    background: #e6f7ff;
-   border: 1px solid red;
 }
 
 .search-card h2 {
    margin-bottom: 4px;
    font-size: 0.6em;
-   border: 1px solid green;
 }
 
 .form-container {
